@@ -1,3 +1,6 @@
+# Godot 4+ specific ignores
+.godot/
+
 # Godot-specific ignores
 .import/
 export.cfg
@@ -9,7 +12,4 @@ export_presets.cfg
 # Mono-specific ignores
 .mono/
 data_*/
-.godot/*
-*.bin
-.godot/editor/project_metadata.cfg
-.godot/editor/filesystem_cache8
+mono_crash.*.json
