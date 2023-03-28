@@ -10,3 +10,6 @@ export_presets.cfg
 .mono/
 data_*/
 .godot/*
+*.bin
+.godot/editor/project_metadata.cfg
+.godot/editor/filesystem_cache8
