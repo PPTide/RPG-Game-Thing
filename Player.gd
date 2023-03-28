@@ -9,13 +9,16 @@ func _physics_process(delta):
 		direction.x = 1
 		$AnimatedSprite2D.play("Run_Right")
 	if Input.is_action_pressed("ui_left"):
-		direction.x = 1
+		direction.x = -1
 		$AnimatedSprite2D.play("Run_Left")
 	if Input.is_action_pressed("ui_down"):
 		direction.y = 1
 		$AnimatedSprite2D.play("Run_Down")
 	if Input.is_action_pressed("ui_up"):
-		direction.y = 1
+		direction.y = -1
 		$AnimatedSprite2D.play("Run_Up")
+		
+		
+	self.velocity = direction * 40
 	
-	self.move_and_collide(direction)
+	self.move_and_slide()
