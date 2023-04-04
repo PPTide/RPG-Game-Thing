@@ -1,42 +1,9 @@
-[gd_scene load_steps=64 format=3 uid="uid://dsxr6rkpxpggu"]
+[gd_scene load_steps=55 format=3 uid="uid://dsxr6rkpxpggu"]
 
 [ext_resource type="PackedScene" path="res://tile_map.tscn" id="1_3x50k"]
 [ext_resource type="Texture2D" uid="uid://c6hgqsayllec2" path="res://Assets/Sprite Pack Update 02.1/New/16x16/Blacksmith/Idle-Sheet.png" id="4_tua6o"]
 [ext_resource type="Texture2D" uid="uid://cj3cxobhmks7u" path="res://Assets/Sprite Pack Update 02.1/New/16x16/Blacksmith/Walk-Sheet.png" id="5_2x1bo"]
 [ext_resource type="Script" path="res://Player.gd" id="5_t2bts"]
-[ext_resource type="Texture2D" uid="uid://b6wbqk3kslgir" path="res://Assets/Sprite Pack Update 02.1/Old/16x16/Heroes/Hero 01.png" id="6_p416t"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bpnkx"]
-atlas = ExtResource("6_p416t")
-region = Rect2(16, 128, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e4hxx"]
-atlas = ExtResource("6_p416t")
-region = Rect2(48, 128, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5f4dh"]
-atlas = ExtResource("6_p416t")
-region = Rect2(64, 128, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_md5ug"]
-atlas = ExtResource("6_p416t")
-region = Rect2(96, 128, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yepgc"]
-atlas = ExtResource("6_p416t")
-region = Rect2(80, 224, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gnhb5"]
-atlas = ExtResource("6_p416t")
-region = Rect2(112, 224, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_riban"]
-atlas = ExtResource("6_p416t")
-region = Rect2(16, 240, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wix47"]
-atlas = ExtResource("6_p416t")
-region = Rect2(48, 240, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fyde6"]
 atlas = ExtResource("4_tua6o")
@@ -232,36 +199,12 @@ region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mrb7b"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bpnkx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e4hxx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5f4dh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_md5ug")
-}],
+"frames": [],
 "loop": true,
 "name": &"Hit_Down",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yepgc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gnhb5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_riban")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wix47")
-}],
+"frames": [],
 "loop": true,
 "name": &"Hit_Left",
 "speed": 5.0
@@ -459,6 +402,11 @@ animations = [{
 "loop": true,
 "name": &"Run_Up",
 "speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Sleep",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hscnk"]
@@ -478,7 +426,7 @@ zoom = Vector2(4.316, 4.316)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_mrb7b")
-animation = &"Idle_Down"
+animation = &"Sleep"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_hscnk")
