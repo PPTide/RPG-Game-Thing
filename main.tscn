@@ -1,6 +1,6 @@
 [gd_scene load_steps=55 format=3 uid="uid://dsxr6rkpxpggu"]
 
-[ext_resource type="PackedScene" path="res://tile_map.tscn" id="1_3x50k"]
+[ext_resource type="PackedScene" uid="uid://cma1a1st033tp" path="res://tile_map.tscn" id="1_3x50k"]
 [ext_resource type="Texture2D" uid="uid://c6hgqsayllec2" path="res://Assets/Sprite Pack Update 02.1/New/16x16/Blacksmith/Idle-Sheet.png" id="4_tua6o"]
 [ext_resource type="Texture2D" uid="uid://cj3cxobhmks7u" path="res://Assets/Sprite Pack Update 02.1/New/16x16/Blacksmith/Walk-Sheet.png" id="5_2x1bo"]
 [ext_resource type="Script" path="res://Player.gd" id="5_t2bts"]
