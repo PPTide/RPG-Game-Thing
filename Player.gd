@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var current_anim = ""
-var old_direction = ""
+var old_direction = "_Down"
 
 func _physics_process(delta):
 	var direction = Vector2.ZERO
