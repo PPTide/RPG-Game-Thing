@@ -20,22 +20,6 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("6_p416t")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h8ffh"]
-atlas = ExtResource("6_p416t")
-region = Rect2(0, 64, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jml0u"]
-atlas = ExtResource("6_p416t")
-region = Rect2(16, 64, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i7sg6"]
-atlas = ExtResource("6_p416t")
-region = Rect2(32, 64, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cby6g"]
-atlas = ExtResource("6_p416t")
-region = Rect2(48, 64, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ww7jo"]
 atlas = ExtResource("6_p416t")
 region = Rect2(0, 16, 16, 16)
@@ -84,6 +68,22 @@ region = Rect2(32, 48, 16, 16)
 atlas = ExtResource("6_p416t")
 region = Rect2(48, 48, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8ffh"]
+atlas = ExtResource("6_p416t")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jml0u"]
+atlas = ExtResource("6_p416t")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7sg6"]
+atlas = ExtResource("6_p416t")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cby6g"]
+atlas = ExtResource("6_p416t")
+region = Rect2(48, 64, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_mrb7b"]
 animations = [{
 "frames": [{
@@ -100,7 +100,58 @@ animations = [{
 "texture": SubResource("AtlasTexture_s18sd")
 }],
 "loop": true,
-"name": &"Idle",
+"name": &"Idle_Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww7jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ys8r2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_133jp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbwdj")
+}],
+"loop": true,
+"name": &"Idle_Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv8h1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg5t7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cp3ps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysvxb")
+}],
+"loop": true,
+"name": &"Idle_Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdhym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_niiiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jp0sw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5onag")
+}],
+"loop": true,
+"name": &"Idle_Up",
 "speed": 5.0
 }, {
 "frames": [{
@@ -118,57 +169,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_Down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ww7jo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ys8r2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_133jp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jbwdj")
-}],
-"loop": true,
-"name": &"Run_Left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rv8h1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hg5t7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cp3ps")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ysvxb")
-}],
-"loop": true,
-"name": &"Run_Right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jdhym")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_niiiv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jp0sw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5onag")
-}],
-"loop": true,
-"name": &"Run_Up",
 "speed": 5.0
 }]
 
@@ -208,7 +208,7 @@ zoom = Vector2(3.44, 3.44)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_mrb7b")
-animation = &"Idle"
+animation = &"Idle_Down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_hscnk")
