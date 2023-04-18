@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var old_direction = "Down"
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = Vector2.ZERO
 	
 	if Input.is_action_pressed("ui_accept"):

@@ -5,6 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_65r2v"]
 
 [node name="Interactable" type="StaticBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_w15a2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -43,8 +43,9 @@ animations = [{
 [node name="Interactable" instance=ExtResource("1_ts11v")]
 script = ExtResource("2_7ghrq")
 
-[node name="CollisionShape2D" parent="." index="0"]
-scale = Vector2(0.8, 0.8)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_dddw5")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 4)
+scale = Vector2(0.8, 0.4)
