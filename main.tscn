@@ -1,42 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dsxr6rkpxpggu"]
+[gd_scene load_steps=3 format=3 uid="uid://dsxr6rkpxpggu"]
 
 [ext_resource type="PackedScene" uid="uid://cma1a1st033tp" path="res://tile_map.tscn" id="1_3x50k"]
-[ext_resource type="Script" path="res://AnimationController.gd" id="3_qmorj"]
-[ext_resource type="SpriteFrames" uid="uid://mqd2ret2qqj0" path="res://Animations/Player/Idle.tres" id="4_l380b"]
-[ext_resource type="SpriteFrames" uid="uid://muts5pcvvxlp" path="res://Animations/Player/Run.tres" id="5_ifn5m"]
-[ext_resource type="Script" path="res://Player.gd" id="5_t2bts"]
-[ext_resource type="SpriteFrames" uid="uid://lqy5nxe1w5en" path="res://Animations/Player/Hit.tres" id="6_feby0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hscnk"]
-size = Vector2(14, 16)
+[ext_resource type="PackedScene" uid="uid://da3r6b3p02men" path="res://player.tscn" id="2_mvfbq"]
 
 [node name="Main" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_3x50k")]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(164, 85)
-script = ExtResource("5_t2bts")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-zoom = Vector2(4.316, 4.316)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_hscnk")
-
-[node name="AnimationController" type="Node2D" parent="CharacterBody2D"]
-script = ExtResource("3_qmorj")
-
-[node name="Idle" type="AnimatedSprite2D" parent="CharacterBody2D/AnimationController"]
-sprite_frames = ExtResource("4_l380b")
-animation = &"Down"
-
-[node name="Run" type="AnimatedSprite2D" parent="CharacterBody2D/AnimationController"]
-visible = false
-sprite_frames = ExtResource("5_ifn5m")
-animation = &"Up"
-
-[node name="Hit" type="AnimatedSprite2D" parent="CharacterBody2D/AnimationController"]
-visible = false
-sprite_frames = ExtResource("6_feby0")
-animation = &"Up"
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_mvfbq")]
