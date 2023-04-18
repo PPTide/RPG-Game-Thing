@@ -9,4 +9,4 @@
 
 [node name="CharacterBody2D" parent="TileMap" instance=ExtResource("2_mvfbq")]
 y_sort_enabled = true
-position = Vector2(11, -372)
+position = Vector2(6, 640)
