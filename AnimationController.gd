@@ -19,8 +19,6 @@ func play_animation(animation, dir):
 	if old_anim.name == animation and dir == old_dir:
 		return
 	
-	print("playing animation ", animation, " in direction ", dir)
-	
 	old_anim.hide()
 	old_anim.stop()
 	
