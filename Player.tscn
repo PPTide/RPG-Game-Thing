@@ -1,26 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://da3r6b3p02men"]
+[gd_scene load_steps=7 format=3 uid="uid://da3r6b3p02men"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_jcl7p"]
 [ext_resource type="Script" path="res://AnimationController.gd" id="2_3p103"]
 [ext_resource type="SpriteFrames" uid="uid://mqd2ret2qqj0" path="res://Animations/Player/Idle.tres" id="3_2fmpv"]
 [ext_resource type="SpriteFrames" uid="uid://muts5pcvvxlp" path="res://Animations/Player/Run.tres" id="4_0hns6"]
 [ext_resource type="SpriteFrames" uid="uid://lqy5nxe1w5en" path="res://Animations/Player/Hit.tres" id="5_mojd1"]
-[ext_resource type="Script" path="res://Interaction.gd" id="6_qmg3v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hscnk"]
-size = Vector2(14, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdka1"]
 size = Vector2(14, 16)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(164, 85)
 script = ExtResource("1_jcl7p")
 
-[node name="PlayerCamera" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4.316, 4.316)
 
-[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hscnk")
 
 [node name="AnimationController" type="Node2D" parent="."]
@@ -39,22 +35,3 @@ animation = &"Up"
 visible = false
 sprite_frames = ExtResource("5_mojd1")
 animation = &"Down"
-
-[node name="Interaction" type="Area2D" parent="."]
-script = ExtResource("6_qmg3v")
-
-[node name="Down" type="CollisionShape2D" parent="Interaction"]
-position = Vector2(0, 16)
-shape = SubResource("RectangleShape2D_tdka1")
-
-[node name="Up" type="CollisionShape2D" parent="Interaction"]
-position = Vector2(0, -16)
-shape = SubResource("RectangleShape2D_tdka1")
-
-[node name="Left" type="CollisionShape2D" parent="Interaction"]
-position = Vector2(-14, 0)
-shape = SubResource("RectangleShape2D_tdka1")
-
-[node name="Right" type="CollisionShape2D" parent="Interaction"]
-position = Vector2(14, 0)
-shape = SubResource("RectangleShape2D_tdka1")
