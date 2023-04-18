@@ -9,4 +9,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if len(self.get_overlapping_bodies()) > 1:
-		print(self.get_overlapping_bodies())
+		#print(self.get_overlapping_bodies())
+		var interactable
+		for body in self.get_overlapping_bodies():
+			if body.name == "Interactable":
+				interactable = body
+				break
+		
+		interactable.doStuff()
