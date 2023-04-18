@@ -34,4 +34,4 @@ animation = &"Up"
 [node name="Hit" type="AnimatedSprite2D" parent="AnimationController"]
 visible = false
 sprite_frames = ExtResource("5_mojd1")
-animation = &"Up"
+animation = &"Down"
