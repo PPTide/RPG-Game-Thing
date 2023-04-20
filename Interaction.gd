@@ -16,4 +16,5 @@ func _process(_delta):
 				interactable = body
 				break
 		
-		interactable.doStuff()
+		if interactable:
+			interactable.doStuff()
