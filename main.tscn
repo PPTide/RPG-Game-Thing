@@ -8,11 +8,10 @@
 y_sort_enabled = true
 
 [node name="TileMap" parent="." instance=ExtResource("1_3x50k")]
-collision_visibility_mode = 1
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_mvfbq")]
 y_sort_enabled = true
-position = Vector2(102, 114)
+position = Vector2(17, 645)
 
 [node name="Interactable" parent="." instance=ExtResource("3_baai0")]
 y_sort_enabled = false
