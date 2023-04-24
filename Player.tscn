@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://da3r6b3p02men"]
+[gd_scene load_steps=11 format=3 uid="uid://da3r6b3p02men"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_jcl7p"]
 [ext_resource type="Script" path="res://AnimationController.gd" id="2_3p103"]
 [ext_resource type="SpriteFrames" uid="uid://mqd2ret2qqj0" path="res://Animations/Player/Idle.tres" id="3_2fmpv"]
 [ext_resource type="SpriteFrames" uid="uid://muts5pcvvxlp" path="res://Animations/Player/Run.tres" id="4_0hns6"]
+[ext_resource type="Script" path="res://Animations/Player/player_animation.gd" id="4_fsn27"]
 [ext_resource type="SpriteFrames" uid="uid://lqy5nxe1w5en" path="res://Animations/Player/Hit.tres" id="5_mojd1"]
 [ext_resource type="Script" path="res://Interaction.gd" id="6_qmg3v"]
 
@@ -26,16 +27,20 @@ script = ExtResource("2_3p103")
 [node name="Idle" type="AnimatedSprite2D" parent="AnimationController"]
 sprite_frames = ExtResource("3_2fmpv")
 animation = &"Down"
+script = ExtResource("4_fsn27")
 
 [node name="Run" type="AnimatedSprite2D" parent="AnimationController"]
 visible = false
 sprite_frames = ExtResource("4_0hns6")
 animation = &"Up"
+script = ExtResource("4_fsn27")
 
 [node name="Hit" type="AnimatedSprite2D" parent="AnimationController"]
 visible = false
 sprite_frames = ExtResource("5_mojd1")
-animation = &"Down"
+animation = &"Up"
+script = ExtResource("4_fsn27")
+repeats = false
 
 [node name="PlayerCamera" type="Camera2D" parent="."]
 zoom = Vector2(4.316, 4.316)

@@ -5,8 +5,6 @@ var old_direction = "Down"
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
 	
-	if Input.is_action_pressed("ui_accept"):
-		$AnimationController.play_animation("Hit", old_direction)
 	if Input.is_action_pressed("ui_right"):
 		direction.x = 1
 		$AnimationController.play_animation("Run", "Right")
@@ -23,7 +21,9 @@ func _physics_process(_delta):
 		direction.y = -1
 		$AnimationController.play_animation("Run", "Up")
 		old_direction = "Up"
-	if direction == Vector2.ZERO:
+	if Input.is_action_pressed("ui_accept"):
+		$AnimationController.play_animation("Hit", old_direction)
+	elif direction == Vector2.ZERO:
 		$AnimationController.play_animation("Idle", old_direction)
 		
 		

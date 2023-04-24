@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c77vqmixwcufe"]
+
+[ext_resource type="Script" path="res://Animations/Player/player_animation.gd" id="1_xnnv5"]
+
+[node name="player_animation" type="AnimatedSprite2D"]
+script = ExtResource("1_xnnv5")

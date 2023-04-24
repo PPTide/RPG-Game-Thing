@@ -1,4 +1,4 @@
-extends "res://Interactables/Interactable.gd"
+extends Interactable
 
 var hasInteracted: bool
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsxr6rkpxpggu"]
 
 [ext_resource type="PackedScene" uid="uid://cma1a1st033tp" path="res://tile_map.tscn" id="1_3x50k"]
-[ext_resource type="PackedScene" uid="uid://da3r6b3p02men" path="res://player.tscn" id="2_mvfbq"]
+[ext_resource type="PackedScene" uid="uid://da3r6b3p02men" path="res://Player.tscn" id="2_mvfbq"]
 [ext_resource type="PackedScene" uid="uid://crxiyhg1p7xyd" path="res://Interactables/Chest.tscn" id="3_baai0"]
 
 [node name="Main" type="Node2D"]
