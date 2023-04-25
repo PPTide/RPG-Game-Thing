@@ -1,11 +1,11 @@
 ~ this_is_a_node_title
 
-Tutorial Dude: [[Hi|Hello|Howdy]], welcome to this game.
-Tutorial Dude: Should I explain how the game works?
-- Yes, please!
-	Tutorial Dude: [i]Insert Tutorial Here[/i]
-- No
-	Tutorial Dude: OK
+Tutorial Dude: [[Hi|Hello|Howdy]], welcome to this game. [ID:tb5eeac2d93]
+Tutorial Dude: Should I explain how the game works? [ID:t87bcb786e4]
+- Yes, please! [ID:te58edcb8ac]
+	Tutorial Dude: [i]Insert Tutorial Here[/i] [ID:tadea10cb79]
+- No [ID:t07e3fe3f4e]
+	Tutorial Dude: OK [ID:t91e661f306]
 	=> END!
 
 => END
