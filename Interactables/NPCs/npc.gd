@@ -1,6 +1,6 @@
-extends StaticBody2D
+extends Interactable
 
-class_name Interactable
+class_name NPC
 
 
 # Called when the node enters the scene tree for the first time.
@@ -9,9 +9,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta):
 	pass
 
-
 func _interaction(_player):
-	print("Interactable Base Class")
+	print("NPC Base Class")

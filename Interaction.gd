@@ -10,11 +10,11 @@ func _ready():
 func _process(_delta):
 	if len(self.get_overlapping_bodies()) > 1:
 		#print(self.get_overlapping_bodies())
-		var interactable
+		var interactable: Interactable
 		for body in self.get_overlapping_bodies():
-			if body.name == "Interactable":
+			if body is Interactable:
 				interactable = body
 				break
 		
 		if interactable:
-			interactable.doStuff()
+			interactable._interaction(self)

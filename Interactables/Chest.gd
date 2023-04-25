@@ -11,7 +11,7 @@ func _ready():
 func _process(_delta):
 	pass
 
-func doStuff():
+func _interaction(_player):
 	if hasInteracted:
 		return
 	print("Chest :)")
