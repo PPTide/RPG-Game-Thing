@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddn64k4sardhe"]
+
+[ext_resource type="Script" path="res://Helpers/talkable.gd" id="1_tvkov"]
+
+[node name="talkable" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_tvkov")

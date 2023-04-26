@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://lo15h5d3gwbk"]
+
+[ext_resource type="Script" path="res://Objects/chest.gd" id="1_b0map"]
+[ext_resource type="Texture2D" uid="uid://c2ob2rjqhj0ab" path="res://Assets/World of Solaria Rural Village Update 07/16x16/Animated Tiles/Village Animated Decorations.png" id="1_ww0w1"]
+[ext_resource type="PackedScene" uid="uid://dpr85ye5vk5qm" path="res://Helpers/action_notifier.tscn" id="2_meimk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alher"]
+atlas = ExtResource("1_ww0w1")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_278ir"]
+atlas = ExtResource("1_ww0w1")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7erb1"]
+atlas = ExtResource("1_ww0w1")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4io1q"]
+atlas = ExtResource("1_ww0w1")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d2fw0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alher")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_278ir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7erb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4io1q")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnewj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_50emd"]
+
+[node name="Chest" type="StaticBody2D"]
+script = ExtResource("1_b0map")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_d2fw0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+scale = Vector2(0.8, 0.4)
+shape = SubResource("RectangleShape2D_cnewj")
+
+[node name="ActionNotifier" parent="." instance=ExtResource("2_meimk")]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionNotifier"]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_50emd")

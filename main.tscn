@@ -1,22 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsxr6rkpxpggu"]
+[gd_scene load_steps=8 format=3 uid="uid://cwsok7y8hv00j"]
 
 [ext_resource type="PackedScene" uid="uid://cma1a1st033tp" path="res://tile_map.tscn" id="1_3x50k"]
-[ext_resource type="PackedScene" uid="uid://da3r6b3p02men" path="res://Player.tscn" id="2_mvfbq"]
-[ext_resource type="PackedScene" uid="uid://crxiyhg1p7xyd" path="res://Interactables/Chest.tscn" id="3_baai0"]
-[ext_resource type="PackedScene" uid="uid://du53s4p62gyt6" path="res://Interactables/NPCs/tutorial_dude.tscn" id="4_tj55l"]
+[ext_resource type="PackedScene" uid="uid://dhulwp7ilqh4g" path="res://Characters/tutorial_dude.tscn" id="4_k84cy"]
+[ext_resource type="PackedScene" uid="uid://ddn64k4sardhe" path="res://Helpers/talkable.tscn" id="5_8aeok"]
+[ext_resource type="Resource" uid="uid://on6mb2y4so6t" path="res://Dialogue/tutorial.dialogue" id="6_ffb3m"]
+[ext_resource type="PackedScene" uid="uid://dkmtbyj2hiqnj" path="res://Player.tscn" id="6_wg4d4"]
+[ext_resource type="PackedScene" uid="uid://lo15h5d3gwbk" path="res://Objects/chest.tscn" id="6_y0onq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40aon"]
+size = Vector2(14, 14)
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
 
 [node name="TileMap" parent="." instance=ExtResource("1_3x50k")]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_mvfbq")]
-y_sort_enabled = true
-position = Vector2(17, 645)
+[node name="TutorialDude" parent="." instance=ExtResource("4_k84cy")]
+position = Vector2(42, 595)
 
-[node name="Interactable" parent="." instance=ExtResource("3_baai0")]
-y_sort_enabled = false
-position = Vector2(71, 613)
+[node name="talkable" parent="TutorialDude" instance=ExtResource("5_8aeok")]
+dialogue_resource = ExtResource("6_ffb3m")
 
-[node name="tutorial_dude" parent="." instance=ExtResource("4_tj55l")]
-position = Vector2(28, 599)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialDude/talkable"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_40aon")
+
+[node name="Player" parent="." instance=ExtResource("6_wg4d4")]
+position = Vector2(24, 637)
+
+[node name="Chest" parent="." instance=ExtResource("6_y0onq")]
+position = Vector2(111, 634)

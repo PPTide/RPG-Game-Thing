@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 var old_direction = "Down"
 
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
+
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
 	
@@ -22,6 +24,10 @@ func _physics_process(_delta):
 		$AnimationController.play_animation("Run", "Up")
 		old_direction = "Up"
 	if Input.is_action_pressed("ui_accept"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			print("actioned")
 		$AnimationController.play_animation("Hit", old_direction)
 	elif direction == Vector2.ZERO:
 		$AnimationController.play_animation("Idle", old_direction)

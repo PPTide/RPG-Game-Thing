@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://da3r6b3p02men"]
+[gd_scene load_steps=9 format=3 uid="uid://dkmtbyj2hiqnj"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_jcl7p"]
 [ext_resource type="Script" path="res://AnimationController.gd" id="2_3p103"]
@@ -6,18 +6,13 @@
 [ext_resource type="SpriteFrames" uid="uid://muts5pcvvxlp" path="res://Animations/Player/Run.tres" id="4_0hns6"]
 [ext_resource type="Script" path="res://Animations/Player/player_animation.gd" id="4_fsn27"]
 [ext_resource type="SpriteFrames" uid="uid://lqy5nxe1w5en" path="res://Animations/Player/Hit.tres" id="5_mojd1"]
-[ext_resource type="Script" path="res://Interaction.gd" id="6_qmg3v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hscnk"]
 size = Vector2(14, 3)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdka1"]
-size = Vector2(14, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_wr5dr"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3f3db"]
-size = Vector2(14, 22)
-
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 position = Vector2(0, -8)
 script = ExtResource("1_jcl7p")
 
@@ -49,21 +44,13 @@ zoom = Vector2(4.316, 4.316)
 position = Vector2(0, 6.5)
 shape = SubResource("RectangleShape2D_hscnk")
 
-[node name="Interaction" type="Area2D" parent="."]
-script = ExtResource("6_qmg3v")
+[node name="Direction" type="Marker2D" parent="."]
+position = Vector2(0, 6)
 
-[node name="Down" type="CollisionShape2D" parent="Interaction"]
-position = Vector2(0, 16)
-shape = SubResource("RectangleShape2D_tdka1")
+[node name="ActionableFinder" type="Area2D" parent="Direction"]
+collision_layer = 2
+collision_mask = 2
 
-[node name="Up" type="CollisionShape2D" parent="Interaction"]
-position = Vector2(0, -6)
-shape = SubResource("RectangleShape2D_3f3db")
-
-[node name="Left" type="CollisionShape2D" parent="Interaction"]
-position = Vector2(-14, 0)
-shape = SubResource("RectangleShape2D_tdka1")
-
-[node name="Right" type="CollisionShape2D" parent="Interaction"]
-position = Vector2(14, 0)
-shape = SubResource("RectangleShape2D_tdka1")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_wr5dr")
