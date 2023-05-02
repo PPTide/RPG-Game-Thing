@@ -1,17 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgiqiu78ogkah"]
+[gd_scene load_steps=4 format=3 uid="uid://bgiqiu78ogkah"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_ijq2x"]
+[ext_resource type="PackedScene" uid="uid://cra057fvfetuh" path="res://menu_background.tscn" id="2_nsufh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iwv6o"]
 font_size = 128
 
-[node name="main_menu" type="Control"]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ijq2x")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+top_level = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,18 +31,20 @@ alignment = 1
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Hello"
+text = "Placeholder"
 label_settings = SubResource("LabelSettings_iwv6o")
 horizontal_alignment = 1
 vertical_alignment = 1
 language = "en"
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="StartGameButton" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Start Game"
 language = "en"
 
-[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="QuitGameButton" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Quit"
 language = "en"
+
+[node name="MenuBackground" parent="." instance=ExtResource("2_nsufh")]

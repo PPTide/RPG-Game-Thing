@@ -49,7 +49,7 @@ msgid "OK"
 msgstr ""
 
 #: main_menu.tscn
-msgid "Hello"
+msgid "Placeholder"
 msgstr ""
 
 #: main_menu.tscn
