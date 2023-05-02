@@ -6,6 +6,7 @@ Tutorial Dude: Should I explain how the game works? [ID:t87bcb786e4]
 	Tutorial Dude: [i]Insert Tutorial Here[/i] [ID:tadea10cb79]
 - No [ID:t07e3fe3f4e]
 	Tutorial Dude: OK [ID:t91e661f306]
-	=> END!
+	
+set State.characterTalking = false
 
 => END
