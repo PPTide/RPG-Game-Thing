@@ -2,6 +2,7 @@
 # res://Dialogue/tutorial.dialogue
 # res://Menus/main_menu.tscn
 # res://Menus/pause_menu.tscn
+# res://Menus/settings_menu.gd
 #
 # FIRST AUTHOR < EMAIL @ADDRESS>, YEAR.
 #
@@ -58,6 +59,16 @@ msgstr ""
 
 #: Menus/main_menu.tscn
 msgid "Quit"
+msgstr ""
+
+#: Menus/pause_menu.tscn
+#: Menus/settings_menu.gd
+msgid "English"
+msgstr ""
+
+#: Menus/pause_menu.tscn
+#: Menus/settings_menu.gd
+msgid "German"
 msgstr ""
 
 #: Menus/pause_menu.tscn
