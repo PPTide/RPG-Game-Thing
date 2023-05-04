@@ -1,7 +1,7 @@
 # LANGUAGE translation for InformatikMitFelix for the following files:
-# res://tutorial.dialogue
 # res://Dialogue/tutorial.dialogue
-# res://main_menu.tscn
+# res://Menus/main_menu.tscn
+# res://Menus/pause_menu.tscn
 #
 # FIRST AUTHOR < EMAIL @ADDRESS>, YEAR.
 #
@@ -48,14 +48,26 @@ msgctxt "t91e661f306"
 msgid "OK"
 msgstr ""
 
-#: main_menu.tscn
+#: Menus/main_menu.tscn
 msgid "Placeholder"
 msgstr ""
 
-#: main_menu.tscn
+#: Menus/main_menu.tscn
 msgid "Start Game"
 msgstr ""
 
-#: main_menu.tscn
+#: Menus/main_menu.tscn
 msgid "Quit"
+msgstr ""
+
+#: Menus/pause_menu.tscn
+msgid "Game Paused"
+msgstr ""
+
+#: Menus/pause_menu.tscn
+msgid "Settings"
+msgstr ""
+
+#: Menus/pause_menu.tscn
+msgid "Exit to Menu"
 msgstr ""

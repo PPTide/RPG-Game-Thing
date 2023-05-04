@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfwpmstutqvmx"]
+[gd_scene load_steps=4 format=3 uid="uid://cfwpmstutqvmx"]
 
-[ext_resource type="Script" path="res://pause_menu.gd" id="1_rqygs"]
+[ext_resource type="Script" path="res://Menus/pause_menu.gd" id="1_0vckx"]
+[ext_resource type="Script" path="res://Menus/settings_menu.gd" id="2_xhavy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_atlpf"]
 font_size = 64
@@ -12,9 +13,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rqygs")
+script = ExtResource("1_0vckx")
 
 [node name="Pause" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -34,7 +36,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(2.08165e-12, 20)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Pause"]
+[node name="SettingsButton" type="Button" parent="Pause"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Settings"
@@ -43,7 +45,7 @@ text = "Settings"
 custom_minimum_size = Vector2(2.08165e-12, 20)
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="Pause"]
+[node name="MenuButton" type="Button" parent="Pause"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Exit to Menu"
@@ -55,7 +57,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
+script = ExtResource("2_xhavy")
 
 [node name="Label" type="Label" parent="Settings"]
 layout_mode = 2
 text = "Settings"
+horizontal_alignment = 1
+
+[node name="LangSelector" type="OptionButton" parent="Settings"]
+layout_mode = 2
+size_flags_horizontal = 4
+item_count = 3
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "German"
+popup/item_1/id = 1
+popup/item_2/text = "Other"
+popup/item_2/id = 2
+popup/item_2/disabled = true
