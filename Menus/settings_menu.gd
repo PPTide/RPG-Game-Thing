@@ -19,7 +19,7 @@ func load_lang():
 	elif lang.begins_with("en"):
 		LangSelector.select(0)
 	else:
-		LangSelector.select(2)
+		LangSelector.select(-1)
 
 func _lang_selected(idx: int):
 	match idx:

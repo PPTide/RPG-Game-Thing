@@ -24,7 +24,7 @@ func _process(delta):
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		reset_view()
-		get_tree().paused = !get_tree().paused
+		get_tree().paused = !self.visible
 		self.visible = !self.visible
 
 func _settings_button_pressed():
@@ -33,4 +33,4 @@ func _settings_button_pressed():
 	
 func _menu_button_pressed():
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://main_menu.tscn")
+	get_tree().change_scene_to_file("res://Menus/main_menu.tscn")
