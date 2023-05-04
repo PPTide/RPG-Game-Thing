@@ -1,23 +1,18 @@
-# LANGUAGE translation for InformatikMitFelix for the following files:
-# res://tutorial.dialogue
-# res://Dialogue/tutorial.dialogue
-# res://main_menu.tscn
-#
-# FIRST AUTHOR < EMAIL @ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: InformatikMitFelix\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: PPTide <translate@pptie.de>\n"
-"Language-Team: pptie.de\n"
-"Language: de\n"
+"Project-Id-Version: informatikmitfelix\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8-bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Crowdin-Project: informatikmitfelix\n"
+"X-Crowdin-Project-ID: 585207\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /main/Translations/all.pot\n"
+"X-Crowdin-File-ID: 5\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"PO-Revision-Date: 2023-05-04 08:50\n"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
@@ -27,7 +22,7 @@ msgstr "Tutorial Typ"
 #: Dialogue/tutorial.dialogue
 msgctxt "tb5eeac2d93"
 msgid "[[Hi|Hello|Howdy]], welcome to this game."
-msgstr "[[Hallo|Moin|Hi]], wilkommen im Spiel."
+msgstr "[[Hallo|Moin|Hi]], willkommen im Spiel."
 
 #: Dialogue/tutorial.dialogue
 msgctxt "t87bcb786e4"
@@ -66,5 +61,3 @@ msgstr "Spiel Starten"
 msgid "Quit"
 msgstr "Spiel Beenden"
 
-#~ msgid "Hello"
-#~ msgstr "Hallo"
