@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 5\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2023-05-04 08:44\n"
+"PO-Revision-Date: 2023-05-04 08:50\n"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
@@ -22,7 +22,7 @@ msgstr "Tutorial Typ"
 #: Dialogue/tutorial.dialogue
 msgctxt "tb5eeac2d93"
 msgid "[[Hi|Hello|Howdy]], welcome to this game."
-msgstr "[[Hallo|Moin|Hi]], wilkommen im Spiel."
+msgstr "[[Hallo|Moin|Hi]], willkommen im Spiel."
 
 #: Dialogue/tutorial.dialogue
 msgctxt "t87bcb786e4"
@@ -47,7 +47,7 @@ msgstr "Nein"
 #: Dialogue/tutorial.dialogue
 msgctxt "t91e661f306"
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: main_menu.tscn
 msgid "Placeholder"
