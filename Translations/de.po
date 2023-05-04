@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 5\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2023-05-04 08:50\n"
+"PO-Revision-Date: 2023-05-04 15:10\n"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
@@ -49,15 +49,27 @@ msgctxt "t91e661f306"
 msgid "OK"
 msgstr "OK"
 
-#: main_menu.tscn
+#: Menus/main_menu.tscn
 msgid "Placeholder"
 msgstr "Platzhalter"
 
-#: main_menu.tscn
+#: Menus/main_menu.tscn
 msgid "Start Game"
 msgstr "Spiel Starten"
 
-#: main_menu.tscn
+#: Menus/main_menu.tscn
 msgid "Quit"
 msgstr "Spiel Beenden"
+
+#: Menus/pause_menu.tscn
+msgid "Game Paused"
+msgstr ""
+
+#: Menus/pause_menu.tscn
+msgid "Settings"
+msgstr ""
+
+#: Menus/pause_menu.tscn
+msgid "Exit to Menu"
+msgstr ""
 
