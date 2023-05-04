@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfwpmstutqvmx"]
+[gd_scene load_steps=3 format=3 uid="uid://cfwpmstutqvmx"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_rqygs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_atlpf"]
 font_size = 64
@@ -10,15 +12,50 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rqygs")
 
-[node name="Label" type="Label" parent="."]
+[node name="Pause" type="VBoxContainer" parent="."]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Pause"]
+layout_mode = 2
+text = "Game Paused"
+label_settings = SubResource("LabelSettings_atlpf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoxContainer2" type="BoxContainer" parent="Pause"]
+custom_minimum_size = Vector2(2.08165e-12, 20)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Pause"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Settings"
+
+[node name="BoxContainer" type="BoxContainer" parent="Pause"]
+custom_minimum_size = Vector2(2.08165e-12, 20)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="Pause"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Exit to Menu"
+
+[node name="Settings" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Game Paused"
-label_settings = SubResource("LabelSettings_atlpf")
-horizontal_alignment = 1
-vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Settings"]
+layout_mode = 2
+text = "Settings"

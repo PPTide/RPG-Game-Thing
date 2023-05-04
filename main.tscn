@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwsok7y8hv00j"]
+[gd_scene load_steps=9 format=3 uid="uid://cwsok7y8hv00j"]
 
 [ext_resource type="PackedScene" uid="uid://cma1a1st033tp" path="res://tile_map.tscn" id="1_3x50k"]
 [ext_resource type="PackedScene" uid="uid://dhulwp7ilqh4g" path="res://Characters/tutorial_dude.tscn" id="4_k84cy"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://dkmtbyj2hiqnj" path="res://Player.tscn" id="6_wg4d4"]
 [ext_resource type="PackedScene" uid="uid://lo15h5d3gwbk" path="res://Objects/chest.tscn" id="6_y0onq"]
 [ext_resource type="PackedScene" uid="uid://cfwpmstutqvmx" path="res://pause_menu.tscn" id="7_dprr8"]
-[ext_resource type="Script" path="res://pause_menu.gd" id="8_e4sio"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40aon"]
 size = Vector2(14, 14)
@@ -38,4 +37,3 @@ process_mode = 3
 
 [node name="pause_menu" parent="CanvasLayer" instance=ExtResource("7_dprr8")]
 visible = false
-script = ExtResource("8_e4sio")
