@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 5\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2023-05-04 15:16\n"
+"PO-Revision-Date: 2023-05-04 15:20\n"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
@@ -64,22 +64,22 @@ msgstr "Spiel Beenden"
 #: Menus/pause_menu.tscn
 #: Menus/settings_menu.gd
 msgid "English"
-msgstr ""
+msgstr "Englisch"
 
 #: Menus/pause_menu.tscn
 #: Menus/settings_menu.gd
 msgid "German"
-msgstr ""
+msgstr "Deutsch"
 
 #: Menus/pause_menu.tscn
 msgid "Game Paused"
-msgstr ""
+msgstr "Spiel Pausiert"
 
 #: Menus/pause_menu.tscn
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: Menus/pause_menu.tscn
 msgid "Exit to Menu"
-msgstr ""
+msgstr "Zum Hauptmenü"
 
