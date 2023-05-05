@@ -68,11 +68,3 @@ horizontal_alignment = 1
 [node name="LangSelector" type="OptionButton" parent="Settings"]
 layout_mode = 2
 size_flags_horizontal = 4
-item_count = 3
-popup/item_0/text = "English"
-popup/item_0/id = 0
-popup/item_1/text = "German"
-popup/item_1/id = 1
-popup/item_2/text = "Other"
-popup/item_2/id = 2
-popup/item_2/disabled = true
