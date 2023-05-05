@@ -1,6 +1,12 @@
 extends Control
 
+class_name PauseMenu
+
 var LastScreens:Array[String] = []
+
+@onready var Pause: VBoxContainer = $Pause
+@onready var Settings: VBoxContainer = $Settings
+@onready var Controls: VBoxContainer = $Controls
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,7 +24,7 @@ func hide_all_children():
 		child.hide()
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("Pause"):
 		if !visible:
 			reset_view()
 			get_tree().paused = true

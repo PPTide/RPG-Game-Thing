@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfwpmstutqvmx"]
+[gd_scene load_steps=5 format=3 uid="uid://cfwpmstutqvmx"]
 
 [ext_resource type="Script" path="res://Menus/pause_menu.gd" id="1_0vckx"]
 [ext_resource type="Script" path="res://Menus/settings_menu.gd" id="2_xhavy"]
+[ext_resource type="PackedScene" uid="uid://b3gsgb4tsvr6i" path="res://Menus/control_box.tscn" id="3_n4oo4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_atlpf"]
 font_size = 64
@@ -51,6 +52,7 @@ size_flags_horizontal = 4
 text = "Exit to Menu"
 
 [node name="Settings" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -68,3 +70,44 @@ horizontal_alignment = 1
 [node name="LangSelector" type="OptionButton" parent="Settings"]
 layout_mode = 2
 size_flags_horizontal = 4
+item_count = 1
+popup/item_0/text = "gs"
+popup/item_0/id = 0
+
+[node name="ControlsButton" type="Button" parent="Settings"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Controls"
+
+[node name="Controls" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Controls"]
+layout_mode = 2
+text = "Control Settings"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" parent="Controls" instance=ExtResource("3_n4oo4")]
+layout_mode = 2
+
+[node name="HBoxContainer2" parent="Controls" instance=ExtResource("3_n4oo4")]
+layout_mode = 2
+control = "Down"
+
+[node name="HBoxContainer3" parent="Controls" instance=ExtResource("3_n4oo4")]
+layout_mode = 2
+control = "Left"
+
+[node name="HBoxContainer4" parent="Controls" instance=ExtResource("3_n4oo4")]
+layout_mode = 2
+control = "Right"
+
+[node name="HBoxContainer5" parent="Controls" instance=ExtResource("3_n4oo4")]
+layout_mode = 2
+control = "Use"

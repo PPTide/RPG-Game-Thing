@@ -1,6 +1,9 @@
 extends VBoxContainer
 
 @onready var LangSelector:OptionButton = $LangSelector
+@onready var ControlsButton:Button = $ControlsButton
+
+@onready var Parent:PauseMenu = $".."
 
 var langs:Array[String] = [tr("English"), tr("German")]
 
@@ -8,6 +11,7 @@ var langs:Array[String] = [tr("English"), tr("German")]
 func _ready():
 	load_lang()
 	LangSelector.item_selected.connect(_lang_selected)
+	ControlsButton.pressed.connect(_controls_button_pressed)
 
 # Loads the language that is currently used and uses that as the default for the selector Box
 func load_lang():
@@ -28,3 +32,8 @@ func _lang_selected(idx: int):
 			TranslationServer.set_locale("en")
 		1:
 			TranslationServer.set_locale("de")
+
+func _controls_button_pressed():
+	Parent.LastScreens.append("Settings")
+	hide()
+	Parent.Controls.show()

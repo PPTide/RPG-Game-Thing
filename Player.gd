@@ -11,27 +11,27 @@ func _physics_process(_delta):
 	var direction = Vector2.ZERO
 	
 	#FIXME: Directions between up/down and right/left don't work in animation
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("Right"):
 		direction.x = 1
 		$AnimationController.play_animation("Run", "Right")
 		Direction.rotation_degrees = -90
 		old_direction = "Right"
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("Left"):
 		direction.x = -1
 		$AnimationController.play_animation("Run", "Left")
 		Direction.rotation_degrees = 90
 		old_direction = "Left"
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("Down"):
 		direction.y = 1
 		$AnimationController.play_animation("Run", "Down")
 		Direction.rotation_degrees = 0
 		old_direction = "Down"
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("Up"):
 		direction.y = -1
 		$AnimationController.play_animation("Run", "Up")
 		Direction.rotation_degrees = 180
 		old_direction = "Up"
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("Use"):
 		var actionables = ActionableFinder.get_overlapping_areas()
 		if actionables.size() > 0:
 			actionables[0].action()
