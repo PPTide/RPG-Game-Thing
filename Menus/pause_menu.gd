@@ -1,5 +1,6 @@
 extends Control
 
+var LastScreens:Array[String] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,11 +19,20 @@ func hide_all_children():
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
-		reset_view()
-		get_tree().paused = !self.visible
-		self.visible = !self.visible
+		if !visible:
+			reset_view()
+			get_tree().paused = true
+			visible = true
+			return
+		if len(LastScreens) > 0:
+			hide_all_children()
+			self.find_child(LastScreens.pop_back()).show()
+			return
+		self.hide()
+		get_tree().paused = false
 
 func _settings_button_pressed():
+	LastScreens.append("Pause")
 	hide_all_children()
 	$Settings.show()
 	
