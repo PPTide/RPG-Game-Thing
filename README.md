@@ -1,4 +1,4 @@
 # RPG Thing
 
 ## Translations
-[Crowdin](https://crowdin.com/project/informatikmitfelix)
+[Crowdin](https://translate.pptie.de/)
