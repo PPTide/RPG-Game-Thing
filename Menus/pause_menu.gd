@@ -16,11 +16,6 @@ func hide_all_children():
 	for child in self.get_children():
 		child.hide()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		reset_view()

@@ -9,6 +9,7 @@ func _ready():
 	load_lang()
 	LangSelector.item_selected.connect(_lang_selected)
 
+# Loads the language that is currently used and uses that as the default for the selector Box
 func load_lang():
 	LangSelector.clear()
 	for l in langs:

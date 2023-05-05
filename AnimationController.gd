@@ -11,11 +11,7 @@ var old_dir = ""
 func _ready():
 	play_animation(default_animation, default_dir)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
-
+# Plays animation in dir. 
 func play_animation(animation:String, dir:String):
 	if (old_anim.name == animation and dir == old_dir):
 		return
@@ -40,6 +36,7 @@ func play_animation(animation:String, dir:String):
 	old_anim = anim
 	old_dir = dir
 
+# Disables the animations that have to be run fully, after they are ran once
 func reset_animation():
 	overAnimation.animation_finished.disconnect(reset_animation)
 	overAnimation = false
