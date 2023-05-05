@@ -3,7 +3,7 @@ extends HBoxContainer
 @export var control:String = "Up"
 
 @onready var ControlName:Label = $ControlName
-@onready var ControlBind:Label = $ControBind
+@onready var ControlBind:ControllerTextureRect = $ControlBind
 
 #FIXME: Help here
 func _ready():
@@ -12,7 +12,7 @@ func _ready():
 	var binds:Array[String]
 	for x in bindsTmp:
 		binds.append(x.as_text())
-	ControlBind.text = join(binds, "; ")
+	ControlBind.path = control
 
 func join(array:Array[String],filler:String) -> String:
 	var rs = ""
