@@ -22,6 +22,7 @@ func reset_view():
 func hide_all_children():
 	for child in self.get_children():
 		child.hide()
+	$BG.show()
 
 func _unhandled_input(event):
 	if event.is_action_pressed("Pause"):
