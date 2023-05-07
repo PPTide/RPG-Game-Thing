@@ -133,10 +133,10 @@ func refresh():
 	# All it takes is to signal icons to refresh paths
 	emit_signal("input_type_changed", _last_input_type)
 
-func parse_path(path: String, input_type = _last_input_type) -> Texture:
+func parse_path(path: String, index:int = 0, input_type = _last_input_type) -> Texture:
 	if typeof(input_type) == TYPE_NIL:
 		return null
-	var root_paths := _expand_path(path, input_type)
+	var root_paths := _expand_path(path, input_type, index)
 	for root_path in root_paths:
 		if not _cached_icons.has(root_path):
 			if _load_icon(root_path):
@@ -163,7 +163,7 @@ func parse_event(event: InputEvent) -> Texture:
 		return _cached_icons[base_path]
 	return null
 
-func _expand_path(path: String, input_type: int) -> Array:
+func _expand_path(path: String, input_type: int, index:int = 0) -> Array:
 	var paths := []
 	var base_paths := [
 		_settings.custom_asset_dir + "/",
@@ -173,7 +173,7 @@ func _expand_path(path: String, input_type: int) -> Array:
 		if base_path.is_empty():
 			continue
 		if _is_path_action(path):
-			var event = _get_matching_event(path, input_type)
+			var event = _get_matching_event(path, input_type, index)
 			if event:
 				base_path += _convert_event_to_path(event)
 		elif path.substr(0, path.find("/")) == "joypad":
@@ -468,20 +468,27 @@ func _convert_joypad_motion_to_path(axis: int):
 			return ""
 	return Mapper._convert_joypad_path(path, _settings.joypad_fallback)
 
-func _get_matching_event(path: String, input_type: int):
+func _get_matching_event(path: String, input_type: int, index:int = 0):
 	var events : Array
 	if _custom_input_actions.has(path):
 		events = _custom_input_actions[path]
 	else:
 		events = InputMap.action_get_events(path)
 
+	var i:int = 0
 	for event in events:
 		match event.get_class():
 			"InputEventKey", "InputEventMouse", "InputEventMouseMotion", "InputEventMouseButton":
 				if input_type == InputType.KEYBOARD_MOUSE:
+					if i < index:
+						i += 1
+						continue
 					return event
 			"InputEventJoypadButton", "InputEventJoypadMotion":
 				if input_type == InputType.CONTROLLER:
+					if i < index:
+						i += 1
+						continue
 					return event
 	return null
 

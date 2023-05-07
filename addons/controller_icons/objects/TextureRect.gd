@@ -2,14 +2,19 @@
 extends TextureRect
 class_name ControllerTextureRect
 
+@export var index : int = 0:
+	set(_index):
+		index = _index
+		path = path
+
 @export var path : String = "":
 	set(_path):
 		path = _path
 		if is_inside_tree():
 			if force_type > 0:
-				texture = ControllerIcons.parse_path(path, force_type - 1)
+				texture = ControllerIcons.parse_path(path, index, force_type - 1)
 			else:
-				texture = ControllerIcons.parse_path(path)
+				texture = ControllerIcons.parse_path(path, index)
 
 @export_enum("Both", "Keyboard/Mouse", "Controller") var show_only : int = 0:
 	set(_show_only):

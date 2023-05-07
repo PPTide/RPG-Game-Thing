@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3gsgb4tsvr6i"]
+[gd_scene load_steps=4 format=3 uid="uid://b3gsgb4tsvr6i"]
 
 [ext_resource type="Script" path="res://Menus/control_box.gd" id="1_moqme"]
-[ext_resource type="Texture2D" uid="uid://casmdw1resubx" path="res://addons/controller_icons/assets/key/w.png" id="2_vyn6s"]
 [ext_resource type="Script" path="res://addons/controller_icons/objects/TextureRect.gd" id="3_2halk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n3sc3"]
@@ -21,10 +20,12 @@ text = "Up"
 custom_minimum_size = Vector2(10, 2.08165e-12)
 layout_mode = 2
 
+[node name="ControlBinds" type="HBoxContainer" parent="."]
+layout_mode = 2
+
 [node name="ControlBind" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("2_vyn6s")
 expand_mode = 1
 script = ExtResource("3_2halk")
 path = "Up"
