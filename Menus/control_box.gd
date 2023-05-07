@@ -1,3 +1,4 @@
+@tool
 extends HBoxContainer
 
 @export var control:String = "Up"
@@ -6,7 +7,7 @@ extends HBoxContainer
 @onready var ControlBind:ControllerTextureRect = $ControlBind
 @onready var Rebinging:Label = $Rebinging
 
-#FIXME: Help here
+#FIXME: Show multiple Keybinds
 func _ready():
 	Rebinging.hide()
 	ControlName.text = control
