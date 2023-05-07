@@ -6,11 +6,13 @@ extends HBoxContainer
 		control = x
 		if ControlName:
 			ControlName.text = x
-			ControlBind.path = x
+			_load_binds()
 
 @onready var ControlName:Label = $ControlName
-@onready var ControlBind:ControllerTextureRect = $ControlBind
+@onready var ControlBinds:HBoxContainer = $ControlBinds
 @onready var Rebinging:Label = $Rebinging
+
+var ControlBind = preload("res://addons/controller_icons/objects/TextureRect.gd")
 
 #FIXME: Show multiple Keybinds
 func _ready():
@@ -20,7 +22,21 @@ func _ready():
 	#var binds:Array[String]
 	#for x in bindsTmp:
 	#	binds.append(x.as_text())
-	ControlBind.path = control
+	_load_binds()
+	
+func _load_binds():
+	for child in ControlBinds.get_children():
+		ControlBinds.remove_child(child)
+	var events = InputMap.action_get_events(control)
+	var eventNum : int = len(events)
+	for i in eventNum:
+		print("Add child %d for %s" % [i, control])
+		var cb:ControllerTextureRect = ControlBind.new()
+		cb.path = control
+		cb.index = i
+		cb.force_type = 0 #FIXME: No Controller support
+		ControlBinds.add_child(cb)
+		pass
 
 func join(array:Array[String],filler:String) -> String:
 	var rs = ""
@@ -35,7 +51,8 @@ func _gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			#print("I've been clicked D:")
-			ControlBind.hide()
+			#FIXME: Find another solution
+			ControlBinds.hide()
 			Rebinging.show()
 
 func _input(event):
@@ -45,4 +62,4 @@ func _input(event):
 		InputMap.action_add_event(control, event)
 		ControllerIcons.refresh()
 		Rebinging.hide()
-		ControlBind.show()
+		ControlBinds.show()
