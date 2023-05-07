@@ -30,6 +30,7 @@ script = ExtResource("3_2halk")
 path = "Up"
 
 [node name="Rebinging" type="Label" parent="."]
+visible = false
 layout_mode = 2
 text = "?"
 label_settings = SubResource("LabelSettings_n3sc3")

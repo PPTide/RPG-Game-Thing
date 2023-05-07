@@ -1,7 +1,12 @@
 @tool
 extends HBoxContainer
 
-@export var control:String = "Up"
+@export var control:String = "Up":
+	set(x):
+		control = x
+		if ControlName:
+			ControlName.text = x
+			ControlBind.path = x
 
 @onready var ControlName:Label = $ControlName
 @onready var ControlBind:ControllerTextureRect = $ControlBind

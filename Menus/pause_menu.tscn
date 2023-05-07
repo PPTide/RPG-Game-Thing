@@ -78,9 +78,12 @@ horizontal_alignment = 1
 [node name="LangSelector" type="OptionButton" parent="Settings"]
 layout_mode = 2
 size_flags_horizontal = 4
-item_count = 1
-popup/item_0/text = "gs"
+item_count = 2
+selected = 0
+popup/item_0/text = "English"
 popup/item_0/id = 0
+popup/item_1/text = "German"
+popup/item_1/id = 1
 
 [node name="ControlsButton" type="Button" parent="Settings"]
 layout_mode = 2
@@ -88,6 +91,7 @@ size_flags_horizontal = 4
 text = "Controls"
 
 [node name="Controls" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

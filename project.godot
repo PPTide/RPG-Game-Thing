@@ -29,6 +29,10 @@ project/assembly_name="InformatikMitFelix"
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/controller_icons/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 Down={
