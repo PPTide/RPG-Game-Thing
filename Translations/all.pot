@@ -82,11 +82,3 @@ msgstr ""
 #: Menus/pause_menu.tscn
 msgid "Exit to Menu"
 msgstr ""
-
-#: Menus/pause_menu.tscn
-msgid "Controls"
-msgstr ""
-
-#: Menus/pause_menu.tscn
-msgid "Control Settings"
-msgstr ""
