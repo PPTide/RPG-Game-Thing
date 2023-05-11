@@ -7,6 +7,8 @@ extends HBoxContainer
 		if ControlName:
 			ControlName.text = x
 			_load_binds()
+			
+@export_enum("None (doesn't work)", "Keyboard/Mouse", "Controller") var force_type
 
 @onready var ControlName:Label = $ControlName
 @onready var ControlBinds:HBoxContainer = $ControlBinds
@@ -28,15 +30,31 @@ func _load_binds():
 	for child in ControlBinds.get_children():
 		ControlBinds.remove_child(child)
 	var events = InputMap.action_get_events(control)
-	var eventNum : int = len(events)
-	for i in eventNum:
-		print("Add child %d for %s" % [i, control])
-		var cb:ControllerTextureRect = ControlBind.new()
-		cb.path = control
-		cb.index = i
-		cb.force_type = 0 #FIXME: No Controller support
-		ControlBinds.add_child(cb)
-		pass
+	var i: int = 0
+	for event in events:
+		match event.get_class():
+			"InputEventKey", "InputEventMouse", "InputEventMouseMotion", "InputEventMouseButton":
+				if force_type == 2:
+					continue
+				print("Add child %d for %s" % [i, control])
+				var cb:ControllerTextureRect = ControlBind.new()
+				cb.path = control
+				cb.index = i
+				cb.force_type = 1 #FIXME: No Controller support
+				ControlBinds.add_child(cb)
+				i += 1
+			"InputEventJoypadButton", "InputEventJoypadMotion":
+				if force_type == 1:
+					continue
+				print("Add child %d for %s" % [i, control])
+				var cb:ControllerTextureRect = ControlBind.new()
+				cb.path = control
+				cb.index = i
+				cb.force_type = 2 #FIXME: No Controller support
+				ControlBinds.add_child(cb)
+				i += 1
+			_:
+				printerr("Ahhh weird type")
 
 func join(array:Array[String],filler:String) -> String:
 	var rs = ""
@@ -52,14 +70,20 @@ func _gui_input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			#print("I've been clicked D:")
 			#FIXME: Find another solution
-			ControlBinds.hide()
+			#ControlBinds.hide()
 			Rebinging.show()
 
 func _input(event):
 	if Rebinging.visible && !event is InputEventMouse:
-		print("Assign to key: ", event.as_text())
-		InputMap.action_erase_events(control)
-		InputMap.action_add_event(control, event)
+		#print("Assign to key: ", event.as_text())
+		#InputMap.action_erase_events(control)
+		#InputMap.action_add_event(control, event)
+		
+		if InputMap.action_has_event(control, event):
+			InputMap.action_erase_event(control, event)
+		else:
+			InputMap.action_add_event(control, event)
+		_load_binds()
 		ControllerIcons.refresh()
 		Rebinging.hide()
-		ControlBinds.show()
+		#ControlBinds.show()

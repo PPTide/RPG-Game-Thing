@@ -6,7 +6,8 @@ var LastScreens:Array[String] = []
 
 @onready var Pause: VBoxContainer = $Pause
 @onready var Settings: VBoxContainer = $Settings
-@onready var Controls: VBoxContainer = $Controls
+@onready var ControlsKeyboard: VBoxContainer = $ControlsKeyboard
+@onready var ControlsController: VBoxContainer = $ControlsController
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

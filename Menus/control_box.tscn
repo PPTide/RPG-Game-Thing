@@ -6,9 +6,9 @@
 font_size = 26
 
 [node name="ControlBox" type="HBoxContainer"]
+size_flags_horizontal = 4
 mouse_filter = 0
 mouse_default_cursor_shape = 2
-alignment = 1
 script = ExtResource("1_moqme")
 
 [node name="ControlName" type="Label" parent="."]
