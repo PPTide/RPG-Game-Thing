@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 5\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2023-05-11 09:53\n"
+"PO-Revision-Date: 2023-05-11 10:51\n"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
@@ -85,11 +85,11 @@ msgstr "Zum Hauptmenü"
 
 #: Menus/pause_menu.tscn
 msgid "Controller Controls"
-msgstr ""
+msgstr "Controllersteuerung"
 
 #: Menus/pause_menu.tscn
 msgid "Keyboard Controls"
-msgstr ""
+msgstr "Tastatursteuerung"
 
 #: Menus/pause_menu.tscn
 msgid "Control Settings"
