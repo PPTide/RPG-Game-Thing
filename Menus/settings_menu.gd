@@ -32,8 +32,10 @@ func load_lang():
 func _lang_selected(idx: int):
 	match idx:
 		0:
+			State.settings.language = "en"
 			TranslationServer.set_locale("en")
 		1:
+			State.settings.language = "de"
 			TranslationServer.set_locale("de")
 
 func _controls_button_contr_pressed():

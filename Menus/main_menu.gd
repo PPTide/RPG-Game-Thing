@@ -13,4 +13,4 @@ func _sgb_pressed():
 	get_tree().change_scene_to_file("res://main.tscn")
 	
 func _qgb_pressed():
-	get_tree().quit()
+	get_tree().get_root().propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)

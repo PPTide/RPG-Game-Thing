@@ -84,6 +84,7 @@ func _input(event):
 		else:
 			InputMap.action_add_event(control, event)
 		_load_binds()
+		State.settings.update_binds()
 		ControllerIcons.refresh()
 		Rebinging.hide()
 		#ControlBinds.show()
