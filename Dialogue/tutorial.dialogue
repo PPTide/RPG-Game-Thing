@@ -20,17 +20,17 @@ set State.game.tutorial_done = true
 
 ~ mission1
 
-Tutorial Dude: If you want to get to the main island I need to build a bridge. 
-Tutorial Dude: Can you please collect 10 [shake rate=20 level=10]Wood[/shake] for me?
+Tutorial Dude: If you want to get to the main island I need to build a bridge. [ID:tffd246968e] 
+Tutorial Dude: Can you please collect 10 [shake rate=20 level=10]Wood[/shake] for me? [ID:te63f038272]
 if State.game.sticks >= 10:
-	Tutorial Dude: Ohh you have the sticks for me!
-	Tutorial Dude: I will get right to work.
+	Tutorial Dude: Ohh you have the sticks for me! [ID:t050ef87008]
+	Tutorial Dude: I will get right to work. [ID:t2ec1c0f379]
 	=> end
-Nathan: Choose a Response...
-- Yes :)
-	Tutorial Dude: Thank you. If you get me 10 Wood I will start building
-- No >:)
-	Tutorial Dude: Then we won't be able to get to the other islands...
+Nathan: Choose a Response... [ID:tc68f2c82d4]
+- Yes :) [ID:tcfbcf752cf]
+	Tutorial Dude: Thank you. If you get me 10 Wood I will start building [ID:t746cc70426]
+- No >:) [ID:t5c1cf59708]
+	Tutorial Dude: Then we won't be able to get to the other islands... [ID:t7e5974e2ec]
 => end
 
 ~ end
