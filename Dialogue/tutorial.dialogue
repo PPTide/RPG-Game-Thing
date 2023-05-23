@@ -1,5 +1,12 @@
 ~ start
 
+if not State.game.tutorial_done:
+	=> tutorial
+else:
+	=> mission1
+
+~ tutorial
+
 Tutorial Dude: [[Hi|Hello|Howdy]], welcome to this game. [ID:tb5eeac2d93]
 Tutorial Dude: Should I explain how the game works? [ID:t87bcb786e4]
 - Yes, please! [ID:te58edcb8ac]
@@ -7,6 +14,26 @@ Tutorial Dude: Should I explain how the game works? [ID:t87bcb786e4]
 - No [ID:t07e3fe3f4e]
 	Tutorial Dude: OK [ID:t91e661f306]
 	
-set State.characterTalking = false
+set State.game.tutorial_done = true
 
-=> END
+=> end
+
+~ mission1
+
+Tutorial Dude: If you want to get to the main island I need to build a bridge. 
+Tutorial Dude: Can you please collect 10 [shake rate=20 level=10]Wood[/shake] for me?
+if State.game.sticks >= 10:
+	Tutorial Dude: Ohh you have the sticks for me!
+	Tutorial Dude: I will get right to work.
+	=> end
+Nathan: Choose a Response...
+- Yes :)
+	Tutorial Dude: Thank you. If you get me 10 Wood I will start building
+- No >:)
+	Tutorial Dude: Then we won't be able to get to the other islands...
+=> end
+
+~ end
+
+set State.characterTalking = false
+=> END!

@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2tsfw0h5c4kg"]
+
+[ext_resource type="Script" path="res://Objects/tree.gd" id="1_s3y8l"]
+[ext_resource type="Texture2D" uid="uid://cje1j8ixa7rrw" path="res://Assets/World of Solaria Rural Village Update 07/16x16/Tilesets/RVNature.png" id="2_cwxvs"]
+[ext_resource type="PackedScene" uid="uid://dpr85ye5vk5qm" path="res://Helpers/action_notifier.tscn" id="3_7g7ww"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qc48e"]
+atlas = ExtResource("2_cwxvs")
+region = Rect2(0, 0, 46, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82snw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qc48e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vcroq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kwh0"]
+size = Vector2(18, 35)
+
+[node name="Tree" type="StaticBody2D"]
+script = ExtResource("1_s3y8l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_82snw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_vcroq")
+
+[node name="ActionNotifier" parent="." instance=ExtResource("3_7g7ww")]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionNotifier"]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_6kwh0")

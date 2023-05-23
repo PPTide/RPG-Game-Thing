@@ -35,7 +35,6 @@ func _physics_process(_delta):
 		var actionables = ActionableFinder.get_overlapping_areas()
 		if actionables.size() > 0:
 			actionables[0].action()
-			print("actioned")
 		#TODO: Play animation based on what Action
 		$AnimationController.play_animation("Hit", old_direction)
 	elif direction == Vector2.ZERO:
