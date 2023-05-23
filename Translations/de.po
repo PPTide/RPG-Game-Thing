@@ -12,12 +12,17 @@ msgstr ""
 "X-Crowdin-File-ID: 5\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2023-05-11 10:51\n"
+"PO-Revision-Date: 2023-05-23 08:46\n"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
 msgid "Tutorial Dude"
 msgstr "Tutorial Typ"
+
+#: Dialogue/tutorial.dialogue
+msgctxt "dialogue"
+msgid "Nathan"
+msgstr ""
 
 #: Dialogue/tutorial.dialogue
 msgctxt "tb5eeac2d93"
@@ -48,6 +53,51 @@ msgstr "Nein"
 msgctxt "t91e661f306"
 msgid "OK"
 msgstr "OK"
+
+#: Dialogue/tutorial.dialogue
+msgctxt "tffd246968e"
+msgid "If you want to get to the main island I need to build a bridge."
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "te63f038272"
+msgid "Can you please collect 10 [shake rate=20 level=10]Wood[/shake] for me?"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "t050ef87008"
+msgid "Ohh you have the sticks for me!"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "t2ec1c0f379"
+msgid "I will get right to work."
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "tc68f2c82d4"
+msgid "Choose a Response..."
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "tcfbcf752cf"
+msgid "Yes :)"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "t746cc70426"
+msgid "Thank you. If you get me 10 Wood I will start building"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "t5c1cf59708"
+msgid "No >:)"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "t7e5974e2ec"
+msgid "Then we won't be able to get to the other islands..."
+msgstr ""
 
 #: Menus/main_menu.tscn
 msgid "Placeholder"
@@ -94,4 +144,12 @@ msgstr "Tastatursteuerung"
 #: Menus/pause_menu.tscn
 msgid "Control Settings"
 msgstr "Tastenbelegungseinstellungen"
+
+#: Menus/hud.tscn
+msgid "Sticks: "
+msgstr ""
+
+#: Menus/hud.tscn
+msgid "0"
+msgstr ""
 
