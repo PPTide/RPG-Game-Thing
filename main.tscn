@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwsok7y8hv00j"]
+[gd_scene load_steps=10 format=3 uid="uid://cwsok7y8hv00j"]
 
 [ext_resource type="PackedScene" uid="uid://cma1a1st033tp" path="res://tile_map.tscn" id="1_3x50k"]
 [ext_resource type="PackedScene" uid="uid://dhulwp7ilqh4g" path="res://Characters/tutorial_dude.tscn" id="4_k84cy"]
 [ext_resource type="PackedScene" uid="uid://ddn64k4sardhe" path="res://Helpers/talkable.tscn" id="5_8aeok"]
+[ext_resource type="PackedScene" uid="uid://nhuf4l7ry3fr" path="res://Menus/hud.tscn" id="6_01jf4"]
 [ext_resource type="Resource" uid="uid://on6mb2y4so6t" path="res://Dialogue/tutorial.dialogue" id="6_ffb3m"]
 [ext_resource type="PackedScene" uid="uid://dkmtbyj2hiqnj" path="res://Player.tscn" id="6_wg4d4"]
 [ext_resource type="PackedScene" uid="uid://cfwpmstutqvmx" path="res://Menus/pause_menu.tscn" id="7_dprr8"]
@@ -31,6 +32,8 @@ position = Vector2(24, 637)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("6_01jf4")]
 
 [node name="pause_menu" parent="CanvasLayer" instance=ExtResource("7_dprr8")]
 visible = false
