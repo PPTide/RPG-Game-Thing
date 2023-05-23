@@ -15,6 +15,7 @@ func _ready():
 	
 	$Pause/SettingsButton.pressed.connect(_settings_button_pressed)
 	$Pause/MenuButton.pressed.connect(_menu_button_pressed)
+	$Pause/ContinueButton.pressed.connect(_continue_button_pressed)
 	
 func reset_view():
 	hide_all_children()
@@ -47,3 +48,12 @@ func _settings_button_pressed():
 func _menu_button_pressed():
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Menus/main_menu.tscn")
+
+func _continue_button_pressed():
+	if len(LastScreens) > 0:
+		hide_all_children()
+		self.find_child(LastScreens.pop_back()).show()
+		return
+	self.hide()
+	get_tree().paused = false
+	
