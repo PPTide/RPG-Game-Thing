@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 5\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2023-05-24 06:15\n"
+"PO-Revision-Date: 2023-05-24 06:18\n"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
@@ -97,7 +97,7 @@ msgstr "Nein >:)"
 #: Dialogue/tutorial.dialogue
 msgctxt "t7e5974e2ec"
 msgid "Then we won't be able to get to the other islands..."
-msgstr ""
+msgstr "Dann können wir nicht zur anderen Insel..."
 
 #: Menus/main_menu.tscn
 msgid "Placeholder"
@@ -147,9 +147,9 @@ msgstr "Tastenbelegungseinstellungen"
 
 #: Menus/hud.tscn
 msgid "Sticks: "
-msgstr ""
+msgstr "Stöcke: "
 
 #: Menus/hud.tscn
 msgid "0"
-msgstr ""
+msgstr "0"
 
