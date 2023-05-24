@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 5\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2023-05-23 08:46\n"
+"PO-Revision-Date: 2023-05-24 06:15\n"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
@@ -22,7 +22,7 @@ msgstr "Tutorial Typ"
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
 msgid "Nathan"
-msgstr ""
+msgstr "Nathan"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "tb5eeac2d93"
@@ -57,42 +57,42 @@ msgstr "OK"
 #: Dialogue/tutorial.dialogue
 msgctxt "tffd246968e"
 msgid "If you want to get to the main island I need to build a bridge."
-msgstr ""
+msgstr "Wenn du zu der großen Insel möchtest, muss ich eine Brücke bauen."
 
 #: Dialogue/tutorial.dialogue
 msgctxt "te63f038272"
 msgid "Can you please collect 10 [shake rate=20 level=10]Wood[/shake] for me?"
-msgstr ""
+msgstr "Kannst du bitte 10 [shake rate=20 level=10]Holz[/shake] für mich sammeln?"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "t050ef87008"
 msgid "Ohh you have the sticks for me!"
-msgstr ""
+msgstr "Ohh du hast die Stöcke für mich!"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "t2ec1c0f379"
 msgid "I will get right to work."
-msgstr ""
+msgstr "Ich fange sofort an."
 
 #: Dialogue/tutorial.dialogue
 msgctxt "tc68f2c82d4"
 msgid "Choose a Response..."
-msgstr ""
+msgstr "Antwort auswählen..."
 
 #: Dialogue/tutorial.dialogue
 msgctxt "tcfbcf752cf"
 msgid "Yes :)"
-msgstr ""
+msgstr "Ja :)"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "t746cc70426"
 msgid "Thank you. If you get me 10 Wood I will start building"
-msgstr ""
+msgstr "Danke. Wenn du mir 10 Holz gibst, fange ich an zu bauen"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "t5c1cf59708"
 msgid "No >:)"
-msgstr ""
+msgstr "Nein >:)"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "t7e5974e2ec"
