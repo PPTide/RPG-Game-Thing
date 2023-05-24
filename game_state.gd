@@ -1,6 +1,10 @@
 class_name GameState extends Object
 
-var tutorial_done:bool = false
+signal tutorial_changed
+var tutorial_done:bool = false:
+	set(x):
+		tutorial_done = x
+		tutorial_changed.emit()
 
 signal sticks_changed
 var sticks: int  = 0:

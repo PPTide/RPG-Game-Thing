@@ -7,6 +7,13 @@ var game:GameState
 
 var settings:Settings
 
+var reset:bool:
+	set(x):
+		game = GameState.new()
+		settings = Settings.new()
+		save_game()
+		get_tree().change_scene_to_file("res://main.tscn")
+
 func save_game():
 	var f = FileAccess.open("user://settings.save", FileAccess.WRITE)
 	f.store_pascal_string(var_to_str(settings))
