@@ -11,3 +11,9 @@ var sticks: int  = 0:
 	set(x):
 		sticks = x
 		sticks_changed.emit()
+
+signal map_changed
+var map: String = "res://tile_map.tscn":
+	set(x):
+		map = x
+		map_changed.emit()

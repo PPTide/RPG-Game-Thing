@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfwpmstutqvmx"]
+[gd_scene load_steps=5 format=3 uid="uid://cfwpmstutqvmx"]
 
 [ext_resource type="Script" path="res://Menus/pause_menu.gd" id="1_0vckx"]
 [ext_resource type="Script" path="res://Menus/settings_menu.gd" id="2_xhavy"]
-[ext_resource type="Script" path="res://addons/controller_icons/objects/TextureRect.gd" id="3_k6kb5"]
 [ext_resource type="PackedScene" uid="uid://b3gsgb4tsvr6i" path="res://Menus/control_box.tscn" id="3_n4oo4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_atlpf"]
@@ -103,18 +102,6 @@ text = "Controller Controls"
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Keyboard Controls"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Settings"]
-layout_mode = 2
-
-[node name="ControllerTextureRect" type="TextureRect" parent="Settings/HBoxContainer"]
-layout_mode = 2
-script = ExtResource("3_k6kb5")
-path = "Pause"
-
-[node name="Label" type="Label" parent="Settings/HBoxContainer"]
-layout_mode = 2
-text = "Back"
 
 [node name="ControlsKeyboard" type="VBoxContainer" parent="."]
 visible = false

@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwsok7y8hv00j"]
+[gd_scene load_steps=11 format=3 uid="uid://cwsok7y8hv00j"]
 
 [ext_resource type="PackedScene" uid="uid://cma1a1st033tp" path="res://tile_map.tscn" id="1_3x50k"]
+[ext_resource type="Script" path="res://main.gd" id="1_r1xpr"]
 [ext_resource type="PackedScene" uid="uid://dhulwp7ilqh4g" path="res://Characters/tutorial_dude.tscn" id="4_k84cy"]
 [ext_resource type="PackedScene" uid="uid://ddn64k4sardhe" path="res://Helpers/talkable.tscn" id="5_8aeok"]
 [ext_resource type="PackedScene" uid="uid://nhuf4l7ry3fr" path="res://Menus/hud.tscn" id="6_01jf4"]
@@ -14,6 +15,7 @@ size = Vector2(14, 14)
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_r1xpr")
 
 [node name="TileMap" parent="." instance=ExtResource("1_3x50k")]
 
