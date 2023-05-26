@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://nhuf4l7ry3fr"]
+[gd_scene load_steps=9 format=3 uid="uid://dimwwbfpac4ai"]
 
 [ext_resource type="Script" path="res://Menus/hud_sticks.gd" id="1_kx6ry"]
 [ext_resource type="Script" path="res://Menus/control_tutorial.gd" id="2_61686"]
