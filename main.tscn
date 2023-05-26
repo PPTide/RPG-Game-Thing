@@ -1,6 +1,5 @@
-[gd_scene load_steps=11 format=3 uid="uid://cwsok7y8hv00j"]
+[gd_scene load_steps=10 format=3 uid="uid://cwsok7y8hv00j"]
 
-[ext_resource type="PackedScene" uid="uid://cma1a1st033tp" path="res://tile_map.tscn" id="1_3x50k"]
 [ext_resource type="Script" path="res://main.gd" id="1_r1xpr"]
 [ext_resource type="PackedScene" uid="uid://dhulwp7ilqh4g" path="res://Characters/tutorial_dude.tscn" id="4_k84cy"]
 [ext_resource type="PackedScene" uid="uid://ddn64k4sardhe" path="res://Helpers/talkable.tscn" id="5_8aeok"]
@@ -16,8 +15,6 @@ size = Vector2(14, 14)
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_r1xpr")
-
-[node name="TileMap" parent="." instance=ExtResource("1_3x50k")]
 
 [node name="TutorialDude" parent="." instance=ExtResource("4_k84cy")]
 position = Vector2(42, 595)
@@ -39,6 +36,16 @@ process_mode = 3
 
 [node name="pause_menu" parent="CanvasLayer" instance=ExtResource("7_dprr8")]
 visible = false
+
+[node name="Black" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Tree" parent="." instance=ExtResource("8_6t2jb")]
 position = Vector2(-58, 577)
