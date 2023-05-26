@@ -36,7 +36,7 @@ func _load_binds():
 			"InputEventKey", "InputEventMouse", "InputEventMouseMotion", "InputEventMouseButton":
 				if force_type == 2:
 					continue
-				print("Add child %d for %s" % [i, control])
+				#print("Add child %d for %s" % [i, control])
 				var cb:ControllerTextureRect = ControlBind.new()
 				cb.path = control
 				cb.index = i
@@ -46,7 +46,7 @@ func _load_binds():
 			"InputEventJoypadButton", "InputEventJoypadMotion":
 				if force_type == 1:
 					continue
-				print("Add child %d for %s" % [i, control])
+				#print("Add child %d for %s" % [i, control])
 				var cb:ControllerTextureRect = ControlBind.new()
 				cb.path = control
 				cb.index = i
