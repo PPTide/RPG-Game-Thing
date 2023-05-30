@@ -12,17 +12,12 @@ msgstr ""
 "X-Crowdin-File-ID: 5\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2023-05-30 08:51\n"
+"PO-Revision-Date: 2023-05-30 10:04\n"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
 msgid "Tutorial Dude"
 msgstr "Tutorial Typ"
-
-#: Dialogue/tutorial.dialogue
-msgctxt "dialogue"
-msgid "Nathan"
-msgstr "Nathan"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "tb5eeac2d93"
@@ -75,11 +70,6 @@ msgid "I will get right to work."
 msgstr "Ich fange sofort an."
 
 #: Dialogue/tutorial.dialogue
-msgctxt "tc68f2c82d4"
-msgid "Choose a Response..."
-msgstr "Antwort auswählen..."
-
-#: Dialogue/tutorial.dialogue
 msgctxt "tcfbcf752cf"
 msgid "Yes :)"
 msgstr "Ja :)"
@@ -98,6 +88,10 @@ msgstr "Nein >:)"
 msgctxt "t7e5974e2ec"
 msgid "Then we won't be able to get to the other islands..."
 msgstr "Dann können wir nicht zur anderen Insel..."
+
+#: Dialogue/tutorial.dialogue
+msgid "Thank you for helping me build the bridge :)"
+msgstr ""
 
 #: Menus/main_menu.tscn
 msgid "Insania"
