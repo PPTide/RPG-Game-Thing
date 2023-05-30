@@ -16,15 +16,19 @@ func _ready():
 	$Pause/SettingsButton.pressed.connect(_settings_button_pressed)
 	$Pause/MenuButton.pressed.connect(_menu_button_pressed)
 	$Pause/ContinueButton.pressed.connect(_continue_button_pressed)
+	$BackButton.pressed.connect(_back_button_pressed)
 	
 func reset_view():
+	LastScreens = []
 	hide_all_children()
 	$Pause.show()
+	$BackButton.hide()
 
 func hide_all_children():
 	for child in self.get_children():
 		child.hide()
 	$BG.show()
+	$BackButton.show()
 
 func _unhandled_input(event):
 	if event.is_action_pressed("Pause"):
@@ -33,9 +37,12 @@ func _unhandled_input(event):
 			get_tree().paused = true
 			visible = true
 			return
-		if len(LastScreens) > 0:
+		if len(LastScreens) > 1:
 			hide_all_children()
 			self.find_child(LastScreens.pop_back()).show()
+			return
+		if len(LastScreens) == 1:
+			reset_view()
 			return
 		self.hide()
 		get_tree().paused = false
@@ -50,10 +57,14 @@ func _menu_button_pressed():
 	get_tree().change_scene_to_file("res://Menus/main_menu.tscn")
 
 func _continue_button_pressed():
-	if len(LastScreens) > 0:
-		hide_all_children()
-		self.find_child(LastScreens.pop_back()).show()
-		return
 	self.hide()
 	get_tree().paused = false
 	
+func _back_button_pressed ():
+	if len(LastScreens) > 1:
+		hide_all_children()
+		self.find_child(LastScreens.pop_back()).show()
+		return
+	if len(LastScreens) == 1:
+		reset_view()
+		return
