@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 5\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2023-05-24 06:18\n"
+"PO-Revision-Date: 2023-05-30 08:51\n"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
@@ -100,8 +100,8 @@ msgid "Then we won't be able to get to the other islands..."
 msgstr "Dann können wir nicht zur anderen Insel..."
 
 #: Menus/main_menu.tscn
-msgid "Placeholder"
-msgstr "Platzhalter"
+msgid "Insania"
+msgstr "Insania"
 
 #: Menus/main_menu.tscn
 msgid "Start Game"
@@ -124,6 +124,10 @@ msgstr "Deutsch"
 #: Menus/pause_menu.tscn
 msgid "Game Paused"
 msgstr "Spiel Pausiert"
+
+#: Menus/pause_menu.tscn
+msgid "Continue"
+msgstr "Fortsetzten"
 
 #: Menus/pause_menu.tscn
 msgid "Settings"
@@ -152,4 +156,8 @@ msgstr "Stöcke: "
 #: Menus/hud.tscn
 msgid "0"
 msgstr "0"
+
+#: Menus/hud.tscn
+msgid "To move use WASD and interact with E: "
+msgstr "Benutze zum Bewegen WASD und interagiere mit E: "
 

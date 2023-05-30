@@ -180,3 +180,12 @@ force_type = 2
 layout_mode = 2
 control = "Use"
 force_type = 2
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 15.0
+offset_top = 604.0
+offset_right = 60.0
+offset_bottom = 635.0
+size_flags_horizontal = 4
+text = "Back"
