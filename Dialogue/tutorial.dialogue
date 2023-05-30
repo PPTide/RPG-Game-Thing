@@ -26,6 +26,7 @@ if State.game.sticks >= 10:
 	Tutorial Dude: Ohh you have the sticks for me! [ID:t050ef87008]
 	Tutorial Dude: I will get right to work. [ID:t2ec1c0f379]
 	set State.game.map = "res://tile_map_bridge.tscn"
+	set State.game.sticks -= 10
 	=> end
 Nathan: Choose a Response... [ID:tc68f2c82d4]
 - Yes :) [ID:tcfbcf752cf]
