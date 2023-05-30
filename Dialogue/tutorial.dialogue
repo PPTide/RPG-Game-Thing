@@ -2,8 +2,9 @@
 
 if not State.game.tutorial_done:
 	=> tutorial
-else:
-	=> mission1
+if State.game.bridge_built:
+	=> thx
+=> mission1
 
 ~ tutorial
 
@@ -26,13 +27,18 @@ if State.game.sticks >= 10:
 	Tutorial Dude: Ohh you have the sticks for me! [ID:t050ef87008]
 	Tutorial Dude: I will get right to work. [ID:t2ec1c0f379]
 	set State.game.map = "res://tile_map_bridge.tscn"
+	set State.game.bridge_built = true
 	set State.game.sticks -= 10
 	=> end
-Nathan: Choose a Response... [ID:tc68f2c82d4]
 - Yes :) [ID:tcfbcf752cf]
 	Tutorial Dude: Thank you. If you get me 10 Wood I will start building [ID:t746cc70426]
 - No >:) [ID:t5c1cf59708]
 	Tutorial Dude: Then we won't be able to get to the other islands... [ID:t7e5974e2ec]
+=> end
+
+~ thx
+
+Tutorial Dude: Thank you for helping me build the bridge :)
 => end
 
 ~ end

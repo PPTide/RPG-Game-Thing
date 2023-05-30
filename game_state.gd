@@ -5,6 +5,8 @@ var tutorial_done:bool = false:
 	set(x):
 		tutorial_done = x
 		tutorial_changed.emit()
+		
+var bridge_built:bool = false
 
 signal sticks_changed
 var sticks: int  = 0:

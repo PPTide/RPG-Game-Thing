@@ -21,11 +21,6 @@ msgid "Tutorial Dude"
 msgstr ""
 
 #: Dialogue/tutorial.dialogue
-msgctxt "dialogue"
-msgid "Nathan"
-msgstr ""
-
-#: Dialogue/tutorial.dialogue
 msgctxt "tb5eeac2d93"
 msgid "[[Hi|Hello|Howdy]], welcome to this game."
 msgstr ""
@@ -76,11 +71,6 @@ msgid "I will get right to work."
 msgstr ""
 
 #: Dialogue/tutorial.dialogue
-msgctxt "tc68f2c82d4"
-msgid "Choose a Response..."
-msgstr ""
-
-#: Dialogue/tutorial.dialogue
 msgctxt "tcfbcf752cf"
 msgid "Yes :)"
 msgstr ""
@@ -100,8 +90,12 @@ msgctxt "t7e5974e2ec"
 msgid "Then we won't be able to get to the other islands..."
 msgstr ""
 
+#: Dialogue/tutorial.dialogue
+msgid "Thank you for helping me build the bridge :)"
+msgstr ""
+
 #: Menus/main_menu.tscn
-msgid "Placeholder"
+msgid "Insania"
 msgstr ""
 
 #: Menus/main_menu.tscn
@@ -124,6 +118,10 @@ msgstr ""
 
 #: Menus/pause_menu.tscn
 msgid "Game Paused"
+msgstr ""
+
+#: Menus/pause_menu.tscn
+msgid "Continue"
 msgstr ""
 
 #: Menus/pause_menu.tscn
@@ -152,4 +150,8 @@ msgstr ""
 
 #: Menus/hud.tscn
 msgid "0"
+msgstr ""
+
+#: Menus/hud.tscn
+msgid "To move use WASD and interact with E: "
 msgstr ""
