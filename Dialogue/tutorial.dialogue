@@ -8,7 +8,7 @@ if State.game.bridge_built:
 
 ~ tutorial
 
-Tutorial Dude: [[Hi|Hello|Howdy]], welcome to this game. [ID:tb5eeac2d93]
+Tutorial Dude: [[Hi|Hello|Howdy]], welcome to this game. To continue Dialog click in this Box. [ID:tdde9780502] 
 Tutorial Dude: Should I explain how the game works? [ID:t87bcb786e4]
 - Yes, please! [ID:te58edcb8ac]
 	Tutorial Dude: [i]Insert Tutorial Here[/i] [ID:tadea10cb79]
@@ -38,7 +38,7 @@ if State.game.sticks >= 10:
 
 ~ thx
 
-Tutorial Dude: Thank you for helping me build the bridge :)
+Tutorial Dude: Thank you for helping me build the bridge :) [ID:tcf7d63f711]
 => end
 
 ~ end
