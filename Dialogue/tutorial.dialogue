@@ -41,6 +41,12 @@ if State.game.sticks >= 10:
 Tutorial Dude: Thank you for helping me build the bridge :) [ID:tcf7d63f711]
 => end
 
+~ otherNPC
+Other NPC: Hey I can talk too :) [ID:tdf84929cad]
+Developer: This is sadly the limit of how much content we were able to make under these time constraints. Thank you for playing! [ID:t3195cdc6f4]
+do get_tree().call_group("TalkingTo", "_interactionFinished")
+=> end
+
 ~ end
 
 set State.characterTalking = false
