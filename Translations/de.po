@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 5\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2023-05-30 10:04\n"
+"PO-Revision-Date: 2023-06-03 17:53\n"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
@@ -20,9 +20,19 @@ msgid "Tutorial Dude"
 msgstr "Tutorial Typ"
 
 #: Dialogue/tutorial.dialogue
-msgctxt "tb5eeac2d93"
-msgid "[[Hi|Hello|Howdy]], welcome to this game."
-msgstr "[[Hallo|Moin|Hi]], willkommen im Spiel."
+msgctxt "dialogue"
+msgid "Other NPC"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "dialogue"
+msgid "Developer"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "tdde9780502"
+msgid "[[Hi|Hello|Howdy]], welcome to this game. To continue Dialog click in this Box."
+msgstr ""
 
 #: Dialogue/tutorial.dialogue
 msgctxt "t87bcb786e4"
@@ -90,7 +100,18 @@ msgid "Then we won't be able to get to the other islands..."
 msgstr "Dann können wir nicht zur anderen Insel..."
 
 #: Dialogue/tutorial.dialogue
+msgctxt "tcf7d63f711"
 msgid "Thank you for helping me build the bridge :)"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "tdf84929cad"
+msgid "Hey I can talk too :)"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "t3195cdc6f4"
+msgid "This is sadly the limit of how much content we were able to make under these time constraints. Thank you for playing!"
 msgstr ""
 
 #: Menus/main_menu.tscn
@@ -142,6 +163,10 @@ msgstr "Tastatursteuerung"
 #: Menus/pause_menu.tscn
 msgid "Control Settings"
 msgstr "Tastenbelegungseinstellungen"
+
+#: Menus/pause_menu.tscn
+msgid "Back"
+msgstr ""
 
 #: Menus/hud.tscn
 msgid "Sticks: "
