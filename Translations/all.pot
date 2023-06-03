@@ -21,8 +21,18 @@ msgid "Tutorial Dude"
 msgstr ""
 
 #: Dialogue/tutorial.dialogue
-msgctxt "tb5eeac2d93"
-msgid "[[Hi|Hello|Howdy]], welcome to this game."
+msgctxt "dialogue"
+msgid "Other NPC"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "dialogue"
+msgid "Developer"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "tdde9780502"
+msgid "[[Hi|Hello|Howdy]], welcome to this game. To continue Dialog click in this Box."
 msgstr ""
 
 #: Dialogue/tutorial.dialogue
@@ -91,7 +101,18 @@ msgid "Then we won't be able to get to the other islands..."
 msgstr ""
 
 #: Dialogue/tutorial.dialogue
+msgctxt "tcf7d63f711"
 msgid "Thank you for helping me build the bridge :)"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "tdf84929cad"
+msgid "Hey I can talk too :)"
+msgstr ""
+
+#: Dialogue/tutorial.dialogue
+msgctxt "t3195cdc6f4"
+msgid "This is sadly the limit of how much content we were able to make under these time constraints. Thank you for playing!"
 msgstr ""
 
 #: Menus/main_menu.tscn
@@ -142,6 +163,10 @@ msgstr ""
 
 #: Menus/pause_menu.tscn
 msgid "Control Settings"
+msgstr ""
+
+#: Menus/pause_menu.tscn
+msgid "Back"
 msgstr ""
 
 #: Menus/hud.tscn
