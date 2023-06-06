@@ -17,21 +17,25 @@ position = Vector2(0, -8)
 script = ExtResource("1_jcl7p")
 
 [node name="AnimationController" type="Node2D" parent="."]
+y_sort_enabled = true
 script = ExtResource("2_3p103")
 
 [node name="Idle" type="AnimatedSprite2D" parent="AnimationController"]
+y_sort_enabled = true
 sprite_frames = ExtResource("3_2fmpv")
 animation = &"Down"
 script = ExtResource("4_fsn27")
 
 [node name="Run" type="AnimatedSprite2D" parent="AnimationController"]
 visible = false
+y_sort_enabled = true
 sprite_frames = ExtResource("4_0hns6")
 animation = &"Up"
 script = ExtResource("4_fsn27")
 
 [node name="Hit" type="AnimatedSprite2D" parent="AnimationController"]
 visible = false
+y_sort_enabled = true
 sprite_frames = ExtResource("5_mojd1")
 animation = &"Up"
 script = ExtResource("4_fsn27")

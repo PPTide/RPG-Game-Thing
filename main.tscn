@@ -145,6 +145,7 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_40aon")
 
 [node name="Player" parent="." instance=ExtResource("6_wg4d4")]
+y_sort_enabled = true
 position = Vector2(24, 637)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -165,10 +166,8 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Trees" type="Node" parent="."]
-
-[node name="Tree" parent="Trees" instance=ExtResource("8_6t2jb")]
-position = Vector2(-58, 577)
+[node name="Trees" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Tree40" parent="Trees" instance=ExtResource("8_6t2jb")]
 position = Vector2(165, 551)
@@ -305,14 +304,18 @@ position = Vector2(-398, 11)
 [node name="Tree16" parent="Trees" instance=ExtResource("8_6t2jb")]
 position = Vector2(-456, -87)
 
+[node name="Tree" parent="Trees" instance=ExtResource("8_6t2jb")]
+position = Vector2(-58, 577)
+
 [node name="TileMap" parent="." instance=ExtResource("9_hyi3t")]
 
 [node name="OtherNPC" type="StaticBody2D" parent="."]
-position = Vector2(49, 128)
+position = Vector2(49, 96)
 script = ExtResource("10_3yio8")
 speed = 0.25
 dialogue_resource = ExtResource("6_ffb3m")
 dialogue_start = "otherNPC"
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="OtherNPC"]
 sprite_frames = SubResource("SpriteFrames_25pos")

@@ -25,9 +25,11 @@ animations = [{
 size = Vector2(18, 35)
 
 [node name="Tree" type="StaticBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_s3y8l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_82snw")
 
