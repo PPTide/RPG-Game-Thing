@@ -8,12 +8,13 @@ var game:GameState
 var settings:Settings
 
 var reset:bool:
-	set(x):
+	set(_x):
 		game = GameState.new()
 		settings = Settings.new()
 		save_game()
 		get_tree().change_scene_to_file("res://main.tscn")
 
+# Saves the current game and settings to disk
 func save_game():
 	var f = FileAccess.open("user://settings.save", FileAccess.WRITE)
 	f.store_pascal_string(var_to_str(settings))
@@ -22,6 +23,7 @@ func save_game():
 	f.store_pascal_string(var_to_str(game))
 	f.close()
 
+# Loads the saved game and settings from disk, if they exist
 func load_game():
 	if FileAccess.file_exists("user://settings.save"):
 		var f = FileAccess.open("user://settings.save", FileAccess.READ)
@@ -38,12 +40,14 @@ func load_game():
 	else:
 		game = GameState.new()
 
+# Called when a notification is received, such as a request to close the window
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		print("Saving Game")
 		save_game()
 		get_tree().quit() # default behavior
 
+# Called when the node enters the scene tree
 func _enter_tree():
 	print("Loading Game")
 	load_game()
