@@ -46,8 +46,8 @@ msgid "Yes, please!"
 msgstr ""
 
 #: Dialogue/tutorial.dialogue
-msgctxt "tadea10cb79"
-msgid "[i]Insert Tutorial Here[/i]"
+msgctxt "t341093fe01"
+msgid "Your goal is to get to the main island with my help. That's why you better do what I tell you."
 msgstr ""
 
 #: Dialogue/tutorial.dialogue

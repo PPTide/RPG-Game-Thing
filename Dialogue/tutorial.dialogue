@@ -11,7 +11,7 @@ if State.game.bridge_built:
 Tutorial Dude: [[Hi|Hello|Howdy]], welcome to this game. To continue Dialog click in this Box. [ID:tdde9780502] 
 Tutorial Dude: Should I explain how the game works? [ID:t87bcb786e4]
 - Yes, please! [ID:te58edcb8ac]
-	Tutorial Dude: [i]Insert Tutorial Here[/i] [ID:tadea10cb79]
+	Tutorial Dude: Your goal is to get to the main island with my help. That's why you better do what I tell you. [ID:t341093fe01]
 - No [ID:t07e3fe3f4e]
 	Tutorial Dude: OK [ID:t91e661f306]
 	

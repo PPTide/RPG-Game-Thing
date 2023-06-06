@@ -17,7 +17,7 @@ func _ready():
 # Called when the game map is changed.
 func _change_map():
 	# Fade to black
-	fade_to_black(1)
+	fade_to_black(2)
 	
 	# Remove the old map and add the new one
 	remove_child($TileMap)
