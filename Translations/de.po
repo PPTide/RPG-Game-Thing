@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 5\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2023-06-03 18:00\n"
+"PO-Revision-Date: 2023-06-06 08:40\n"
 
 #: Dialogue/tutorial.dialogue
 msgctxt "dialogue"
@@ -45,9 +45,9 @@ msgid "Yes, please!"
 msgstr "Ja, bitte!"
 
 #: Dialogue/tutorial.dialogue
-msgctxt "tadea10cb79"
-msgid "[i]Insert Tutorial Here[/i]"
-msgstr "[i]Tutorial hier einfügen[/i]"
+msgctxt "t341093fe01"
+msgid "Your goal is to get to the main island with my help. That's why you better do what I tell you."
+msgstr ""
 
 #: Dialogue/tutorial.dialogue
 msgctxt "t07e3fe3f4e"
